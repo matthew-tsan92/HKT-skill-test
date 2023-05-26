@@ -19,18 +19,18 @@ const questions = [
         ID: 3,
         question: 'Which HTML attribute is used to define inline styles?',
         choices: 
-        [{ans:'font', correctAns: false}, 
-        {ans:'Class', correctAns: false},
-        {ans:'style', correctAns: true},
+        [{ans:'<font>', correctAns: false}, 
+        {ans:'<Class>', correctAns: false},
+        {ans:'<style>', correctAns: true},
         {ans:'None of the above', correctAns: false}]
     },
     {
         ID: 4,
         question: 'Inside which HTML element do we put the JavaScript?',
         choices: 
-        [{ans:'scripting', correctAns: false}, 
-        {ans:'javascript', correctAns: false},
-        {ans:'js', correctAns: false},
+        [{ans:'<scripting>', correctAns: false}, 
+        {ans:'<javascript>', correctAns: false},
+        {ans:'<js>', correctAns: false},
         {ans:'None of the above', correctAns: true}]
     },
     {
@@ -119,7 +119,7 @@ function displayQuestions() {
     if (currentIndex == 2 || currentIndex == 3) {
         currentQuestion.choices.forEach((choice) => {
             const choiceBtn = document.createElement('button')
-            choiceBtn.innerHTML = choice.ans
+            choiceBtn.innerText = choice.ans
             choiceBtn.classList.add('ansBtn')
             answerEl.appendChild(choiceBtn)
             if (choice.correctAns) {
