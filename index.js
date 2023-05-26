@@ -19,9 +19,9 @@ const questions = [
         ID: 3,
         question: 'Which HTML attribute is used to define inline styles?',
         choices: 
-        [{ans:'<font>', correctAns: false}, 
-        {ans:'<Class>', correctAns: false},
-        {ans:'<style>', correctAns: true},
+        [{ans:'font', correctAns: false}, 
+        {ans:'Class', correctAns: false},
+        {ans:'style', correctAns: true},
         {ans:'None of the above', correctAns: false}]
     },
     {
@@ -37,9 +37,9 @@ const questions = [
         ID: 5,
         question: 'What is the correct syntax for referring to an external script called "xxx.js"?',
         choices: 
-        [{ans:'script href="xxx.js"', correctAns: false}, 
-        {ans:'script src="xxx.js"', correctAns: true},
-        {ans:'script name="xxx.js"', correctAns: false},]
+        [{ans:'<script href="xxx.js">', correctAns: false}, 
+        {ans:'<script src="xxx.js">', correctAns: true},
+        {ans:'<script name="xxx.js">', correctAns: false},]
     },
     {
         ID: 6,
@@ -132,7 +132,7 @@ function displayQuestions() {
         shuffledArray = shuffleArray(currentQuestion.choices)
         shuffledArray.forEach((choice) => {
             const choiceBtn = document.createElement('button')
-            choiceBtn.innerHTML = choice.ans
+            choiceBtn.innerText = choice.ans
             choiceBtn.classList.add('ansBtn')
             answerEl.appendChild(choiceBtn)
             if (choice.correctAns) {

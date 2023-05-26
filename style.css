@@ -10,7 +10,7 @@ body {
 
 .home {
     width: 50%;
-    margin: 100px auto;
+    margin: 10px auto;
     padding: 100px;
     border-radius: 10px;
 }
@@ -67,4 +67,8 @@ body {
 
 .isWrong {
     background: rgb(255, 50, 50);
+}
+
+#final {
+    margin-top: 20px;
 }
